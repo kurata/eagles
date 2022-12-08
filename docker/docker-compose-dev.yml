@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  postgres:
+    image: postgres:latest
+    container_name: eagles_postgres_local
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: eagles
+      TZ: UTC
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data

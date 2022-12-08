@@ -1,0 +1,27 @@
+version: "3.0"
+services:
+  postgres:
+    image: postgres:latest
+    container_name: eagles_postgres_local
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: eagles
+      TZ: UTC
+    ports:
+      - 5432:5432
+    networks:
+      eagles-network:
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+  eagles:
+    image: eagles:0.0.1-SNAPSHOT
+    container_name: eagles_app_local
+    ports:
+      - 8080:8080
+    networks:
+      eagles-network:
+    depends_on:
+      - postgres
+networks:
+  eagles-network:
+    driver: bridge

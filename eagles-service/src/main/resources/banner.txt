@@ -1,0 +1,11 @@
+
+,------.                  ,--.
+|  .---'  ,--,--.  ,---.  |  |  ,---.   ,---.
+|  `--,  ' ,-.  | | .-. | |  | | .-. : (  .-'
+|  `---. \ '-'  | ' '-' ' |  | \   --. .-'  `)
+`------'  `--`--' .`-  /  `--'  `----' `----'
+                  `---'
+
+${Ansi.BLUE} :: ${info.app.name} ${info.app.version} :: ${Ansi.BLUE}
+${AnsiColor.GREEN} :: Spring Boot${spring-boot.formatted-version} :: ${AnsiColor.GREEN}
+${AnsiColor.DEFAULT}

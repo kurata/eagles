@@ -1,0 +1,9 @@
+profile: standalone
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/eagles
+    username: eagles_user
+    password: password
+  jpa:
+    show-sql: true
